@@ -14,7 +14,7 @@ router.get("", async (req, res) => {
 router.get("/:id", async (req, res) => {
     try {
         const master = await MasterAccount.findById(req.params.id)
-        return res.send(master.account_number,master.balance)
+        return res.send(master.account_number ,master.balance )
     } catch {
         
     }
