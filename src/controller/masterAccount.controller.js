@@ -4,9 +4,9 @@ const MasterAccount = require("../model/masterAccount.model")
 
 router.get("", async (req, res) => {
     try {
-        const master = await MasterAccount.find().lean().exec()
+        const masters = await MasterAccount.find().lean().exec()
         console.log("yes")
-        return res.send(master)
+        return res.send(masters)
     } catch (e) {
         console.log(e.message)
     }
