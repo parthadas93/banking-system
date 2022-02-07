@@ -13,4 +13,6 @@ const masterAccountSchema = new mongoose.Schema({
 
 )
 
-module.exports = masterAccountSchema
+const Master = mongoose.model("master",masterAccountSchema )
+
+module.exports = Master
