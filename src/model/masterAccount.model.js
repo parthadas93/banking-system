@@ -5,7 +5,18 @@ const mongoose = require("mongoose")
 // - updatedAt (required)
 
 const masterAccountSchema = new mongoose.Schema({
-    balance: {type:Number, require: true},
+    balance: { type: Number, require: true },
+    user_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        require: true
+    },
+    branch_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Branch",
+        require: true
+    }
+
 },
     {
         timeStamps: true
